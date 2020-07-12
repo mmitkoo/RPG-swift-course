@@ -8,3 +8,9 @@ protocol PlayerGenerator {
     init(heroGenerator: HeroGenerator)
     func generatePlayer(name: String) -> Player
 }
+
+extension Player {
+     mutating func reduceEnergy() {
+        hero.energy -= 1
+    }
+}

@@ -1,23 +1,23 @@
-struct DefaultHero: Hero {
-   var race: String  = "Random Race"
+// struct DefaultHero: Hero {
+//    var race: String  = "Random Race"
 
-    var energy: Int = 5
-    var lifePoitns: Int = 7
+//     var energy: Int = 5
+//     var lifePoitns: Int = 7
 
-    var weapon: Weapon?  = nil
-    var armor: Armor? = nil
+//     var weapon: Weapon?  = nil
+//     var armor: Armor? = nil
 
-}
+// }
 
-struct NoArmor: Armor {
-    var attack: Int = 0
-    var defence: Int = 0
-}
+// struct NoArmor: Armor {
+//     var attack: Int = 0
+//     var defence: Int = 0
+// }
 
-struct WoodenStick: Weapon {
-    var attack: Int = 2
-    var defence: Int = 1
-}
+// struct WoodenStick: Weapon {
+//     var attack: Int = 2
+//     var defence: Int = 1
+// }
 
 class DefaultPlayer: Player {
     var name: String = "Default Player"
