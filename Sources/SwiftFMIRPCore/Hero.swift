@@ -21,7 +21,11 @@ protocol Fight {
 }
 
 protocol FightGenerator {
-    
+    var attacker: Player {get set}
+    var defender: Player {get set}
+
+    init(attacker: Player, defender: Player)
+    func generateFight() -> Fight
 }
 
 protocol EquipmentGenerator {
