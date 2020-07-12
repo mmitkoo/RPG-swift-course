@@ -120,15 +120,15 @@ class DefaultMapRenderer: MapRenderer {
         for tile in row {
             switch tile.type {
             case .chest:
-                r += "📦"
+                r += "C"
             case .rock:
-                r += "🗿"
+                r += "R"
             case .teleport:
-                r += "💿"
+                r += "O"
             case .empty:
-                r += "  "
+                r += " "
             case .wall:
-                r += "🧱"
+                r += "X"
             default:
                 //empty
                 r += " "
