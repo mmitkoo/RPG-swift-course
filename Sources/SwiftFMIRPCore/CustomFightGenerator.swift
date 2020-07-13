@@ -1,10 +1,10 @@
-class CustomFightGenerator : FightGenerator {
-    // func generateFight(name: String) -> Player {
-    //     var player = DefaultPlayer()
-    //     player.name = name
-    //     player.hero = heroGenerator.getRandom()
-    //     return player
-    // }
+struct CustomFightGenerator : FightGenerator {
+    var attacker: Player
+    var defender: Player
+
+    func generateFight() -> Fight {
+        return CustomFight(attacker: attacker.hero, host: defender.hero, winner: nil)
+    }
 }
 
 // protocol Fight {
@@ -32,10 +32,8 @@ class CustomFightGenerator : FightGenerator {
 
 struct CustomFight: Fight {
     var attacker: Hero
-    var host: Hero
-    var winner: Hero
-
-
+    var host: Hero 
+    var winner: Hero?
     
     func start(finish:(Fight) -> ()) {
         print("hello")

@@ -40,8 +40,9 @@ struct DefaultPlayerGenerator: PlayerGenerator {
 }
 
 struct DefaultHeroGenerator: HeroGenerator {
+    let heroes: [Hero] = [Phoenix(), DragonKiller(), DarkKnight(), Mage(), Viking()]
     func getRandom() -> Hero {
-        return DefaultHero()
+        return heroes.randomElement()!
     }
 }
 
@@ -92,9 +93,9 @@ class DefaultMap : Map {
     
 }
 
-class DefaultFightGenerator : FightGenerator {
-    //TBD
-}
+// class DefaultFightGenerator : FightGenerator {
+//     //TBD
+// }
 
 class DefaultEquipmentGenerator : EquipmentGenerator {
     var allArmors: [Armor]

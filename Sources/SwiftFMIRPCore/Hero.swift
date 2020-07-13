@@ -17,14 +17,13 @@ protocol Fight {
     var host: Hero {get set}
     
     func start(finish:(Fight) -> ())
-    var winner: Hero {get set}
+    var winner: Hero? {get set}
 }
 
 protocol FightGenerator {
     var attacker: Player {get set}
     var defender: Player {get set}
 
-    init(attacker: Player, defender: Player)
     func generateFight() -> Fight
 }
 
