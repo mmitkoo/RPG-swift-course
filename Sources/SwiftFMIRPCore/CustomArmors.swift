@@ -1,3 +1,8 @@
+struct NoArmor: Armor {
+    var attack: Int = 0
+    var defence: Int = 0
+}
+
 struct FireWings: Armor {
     var attack: Int = 5
     var defence: Int = 30

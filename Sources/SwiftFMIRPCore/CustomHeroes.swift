@@ -47,3 +47,20 @@ struct Viking: Hero {
     var weapon: Weapon?  = Axe()
     var armor: Armor? = SteelBoots()
 }
+
+struct CustomHeroGenerator: HeroGenerator {
+    let heroes: [Hero] = [Phoenix(), DragonKiller(), DarkKnight(), Mage(), Viking()]
+    var equipmentGenerator: EquipmentGenerator
+
+    init(equipmentGenerator: EquipmentGenerator){
+        self.equipmentGenerator = equipmentGenerator
+    }
+
+    func getRandom() -> Hero {
+        var hero: Hero = heroes.randomElement() ?? Viking()
+        hero.armor = equipmentGenerator.getRandomArmor()
+        hero.weapon = equipmentGenerator.getRandomWeapon()
+
+        return hero
+    }
+}

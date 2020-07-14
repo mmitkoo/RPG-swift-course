@@ -30,4 +30,6 @@ protocol FightGenerator {
 protocol EquipmentGenerator {
     var allArmors: [Armor] {get}
     var allWeapons: [Weapon] {get}
+    func getRandomArmor() -> Armor
+    func getRandomWeapon() -> Weapon 
 }
