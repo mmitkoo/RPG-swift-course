@@ -1,51 +1,3 @@
-// struct DefaultHero: Hero {
-//    var race: String  = "Random Race"
-
-//     var energy: Int = 5
-//     var lifePoitns: Int = 7
-
-//     var weapon: Weapon?  = nil
-//     var armor: Armor? = nil
-
-// }
-
-// struct NoArmor: Armor {
-//     var attack: Int = 0
-//     var defence: Int = 0
-// }
-
-// struct WoodenStick: Weapon {
-//     var attack: Int = 2
-//     var defence: Int = 1
-// }
-
-// class DefaultPlayer: Player {
-//     var name: String = "Default Player"
-//     var hero: Hero = CustomHeroGenerator().getRandom()
-//     var isAlive: Bool  = true
-// }
-
-// struct DefaultPlayerGenerator: PlayerGenerator {
-//     var heroGenerator: HeroGenerator
-//     init(heroGenerator: HeroGenerator) {
-//         self.heroGenerator = heroGenerator
-//     }
-    
-//     func generatePlayer(name: String) -> Player {
-//         var player = DefaultPlayer()
-//         player.name = name
-//         player.hero = heroGenerator.getRandom()
-//         return player
-//     }
-// }
-
-// struct DefaultHeroGenerator: HeroGenerator {
-//     let heroes: [Hero] = [Phoenix(), DragonKiller(), DarkKnight(), Mage(), Viking()]
-//     func getRandom() -> Hero {
-//         return heroes.randomElement()!
-//     }
-// }
-
 struct DefaultMapGenerator : MapGenerator {
     func generate(players: [Player]) -> Map {
         return DefaultMap(players: players)
@@ -92,21 +44,6 @@ class DefaultMap : Map {
     }
     
 }
-
-// class DefaultFightGenerator : FightGenerator {
-//     //TBD
-// }
-
-// class DefaultEquipmentGenerator : EquipmentGenerator {
-//     var allArmors: [Armor]
-    
-//     var allWeapons: [Weapon]
-    
-//     init() {
-//         allArmors = [NoArmor()]
-//         allWeapons = [WoodenStick()]
-//     }
-// }
 
 class DefaultMapRenderer: MapRenderer {
     func render(map: Map) {

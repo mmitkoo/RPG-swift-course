@@ -27,22 +27,3 @@ struct OracleSecepter: Weapon {
     var attack: Int = 20
     var defence: Int = 20
 }
-
-class CustomEquipmentGenerator : EquipmentGenerator {
-    var allArmors: [Armor] = [FireWings(), DragonArmor(), LargeShield(), SteelBoots(), DiamondPlatemail(),DragonPlatemail()]
-    
-    var allWeapons: [Weapon] = [WoodenStick(), FireSword(), IronMace(), DragonSlayer(), Axe(), OracleSecepter()]
-    
-    init() {
-        allArmors = [NoArmor()]
-        allWeapons = [WoodenStick()]
-    }
-
-    func getRandomArmor() -> Armor {
-        return allArmors.randomElement() ??  SteelBoots()
-    }
-
-    func getRandomWeapon() -> Weapon {
-        return allWeapons.randomElement() ?? WoodenStick()
-    }
-}
